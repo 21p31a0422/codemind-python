@@ -5,14 +5,14 @@ def trans(r, c, mat):
             res[j][i] = mat[i][j]
     return res
 
-def max_sum(r, c, mat):
+def max_sum(mat):
     out = 0
-    for i in range(r):
-        s = sum(mat[i])
+    for row in mat:
+        s = sum(row)
         if out < s:
             out = s
     return out
 
 r, c = map(int, input(). split())
 mat = [list(map(int, input(). split())) for i in range(r)]
-print(max(max_sum(r, c, mat), max_sum(r, c, trans(r, c, mat))))
+print(max(max_sum(mat), max_sum(trans(r, c, mat))))
