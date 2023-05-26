@@ -1,11 +1,7 @@
-def fibanocci(n):
-    out = []
-    prev, nxt = 0, 1 
-    for i in range(n):
-        out.append(prev)
-        tmp = prev
-        prev = nxt
-        nxt += tmp
-    return out
+def fib(n):
+    if n in {0, 1}:
+        return n
+    return fib(n - 1) + fib(n - 2)
     
-print(*fibanocci(int(input())))
+lst = [fib(n) for n in range(int(input()))]
+print(*lst)
