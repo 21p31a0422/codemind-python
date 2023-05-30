@@ -1,15 +1,10 @@
-def Max_num(arr, low, high):
-    count = 0
-    for i in arr:
-        if low <= i <= high and i > count:
-            count = i
-    return count
-    
-n = int(input())
+n, val = int(input()), 0
 arr = list(map(int, input(). split()))
 low, high = map(int, input(). split())
-result = Max_num(arr, low, high)
-if result:
-    print(result)
+for i in arr:
+    if low <= i <= high and i > val:
+        val = i
+if val:
+    print(val)
 else:
     print(-1)
