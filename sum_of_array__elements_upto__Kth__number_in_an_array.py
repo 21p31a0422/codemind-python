@@ -1,0 +1,5 @@
+n = int(input())
+arr = list(map(int, input(). split()))
+k = int(input())
+ind = arr.index(k)
+print(sum(arr[:ind + 1]))
